@@ -22,6 +22,34 @@ You can also select your **English proficiency level (A1–C2)** to get words ta
 
 ---
 
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/random-english-words-api.git
+cd random-english-words-api
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Running the App
+```bash
+uvicorn main:app --reload
+```
+Then open your browser at:
+👉 http://127.0.0.1:8000/docs
+
+---
+
+## 📚 API Endpoints
+
+| Method | Endpoint           | Description                                 |
+| ------ | ------------------ | ------------------------------------------- |
+| `GET`  | `/random`          | Get a random English word                   |
+| `GET`  | `/random?level=A2` | Get a random word filtered by level (A1–C1) |
+
+---
+
 ## 🧩 Future Improvements
 - ☐ Add part of speech (noun, verb, adjective, etc.)
 - ☐ Support multiple languages
