@@ -1,7 +1,7 @@
 # 🧠 Random English Words API
 
 A simple yet powerful **FastAPI** application that serves random English words — perfect for learners!  
-You can also select your **English proficiency level (A1–C2)** to get words tailored to your vocabulary.
+You can also select your **English proficiency level (A1–C1)** to get words tailored to your vocabulary.
 
 ---
 
