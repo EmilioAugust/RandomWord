@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models.models import Word, LevelWord
+from models import Word, LevelWord
 from services.services import fetch_definition_word
 import json
 import glob

@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from random_word import random_word
+from random_word import router
 
 app = FastAPI()
-app.include_router(random_word.router)
+app.include_router(router)
 
 @app.get('/')
 async def main():

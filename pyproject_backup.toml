@@ -1,0 +1,15 @@
+[project]
+name = "random-word"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "fastapi>=0.120.4",
+    "httpx>=0.28.1",
+    "pytest>=8.4.2",
+    "requests>=2.32.5",
+    "sqlalchemy>=2.0.44",
+    "uvicorn>=0.38.0",
+]
