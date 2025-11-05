@@ -18,7 +18,7 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 - **Backend:** [FastAPI](https://fastapi.tiangolo.com/)  
 - **Language:** Python 3.10+  
-- **Data Source:** Custom dataset
+- **Data Source:** Custom dataset (8000 words, but in future I'll add more words)
 
 ---
 
