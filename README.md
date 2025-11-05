@@ -48,8 +48,8 @@ Or you can just open this website, if you don't want to do everything above:
 
 | Method | Endpoint           | Description                                 |
 | ------ | ------------------ | ------------------------------------------- |
-| `GET`  | `/random`          | Get a random English word                   |
-| `GET`  | `/random/a1` | Get a random word filtered by level (A1–C1) |
+| `GET`  | `/v1/random`          | Get a random English word                   |
+| `GET`  | `/v1/random/a1` | Get a random word filtered by level (A1–C1) |
 
 ---
 
