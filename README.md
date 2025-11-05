@@ -46,7 +46,7 @@ Then open your browser at:
 | Method | Endpoint           | Description                                 |
 | ------ | ------------------ | ------------------------------------------- |
 | `GET`  | `/random`          | Get a random English word                   |
-| `GET`  | `/random?level=A2` | Get a random word filtered by level (A1–C2) |
+| `GET`  | `/random?level=A2` | Get a random word filtered by level (A1–C1) |
 
 ---
 
