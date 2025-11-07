@@ -16,9 +16,11 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 ## 🛠️ Tech Stack
 
-- **Backend:** [FastAPI](https://fastapi.tiangolo.com/)  
-- **Language:** Python 3.10+  
-- **Data Source:** Custom dataset (8000 words, but in future I'll add more words)
+- **Backend:** [FastAPI](https://fastapi.tiangolo.com/)
+- **Database:** [Supabase](https://supabase.com/)
+- **Language:** Python 3.10+
+- **Deployment:** [Vercel](https://vercel.com/)
+- **Data Source:** 8,000+ English words with CEFR levels
 
 ---
 
