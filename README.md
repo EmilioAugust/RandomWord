@@ -54,7 +54,7 @@ Or you can just open this website, if you don't want to do everything above:
 ---
 
 ## 🧩 Future Improvements
-- ☐ Add part of speech (noun, verb, adjective, etc.)
+- ☑️ Add part of speech (noun, verb, adjective, etc.)
 - ☐ Support multiple languages
 
 ---
