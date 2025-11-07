@@ -10,5 +10,4 @@ wheels/
 .venv
 .env
 
-# Files
-json_files/
+json_files/*.json
