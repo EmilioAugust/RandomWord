@@ -6,10 +6,13 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "beautifulsoup4>=4.14.2",
+    "dotenv>=0.9.9",
+    "environs>=14.5.0",
     "fastapi>=0.120.4",
     "httpx>=0.28.1",
     "pytest>=8.4.2",
     "requests>=2.32.5",
     "sqlalchemy>=2.0.44",
+    "supabase>=2.23.3",
     "uvicorn>=0.38.0",
 ]

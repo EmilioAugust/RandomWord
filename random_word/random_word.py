@@ -1,75 +1,129 @@
 from fastapi import APIRouter, HTTPException
+from supabase import create_client
 from models import Word, LevelWord
 from services.services import fetch_definition_word
-import json
-import glob
-import random
+import json, random, glob
+from environs import Env
 
+env = Env()
+env.read_env(".env")
 router = APIRouter(prefix='/v1')
+SUPABASE_URL = env("SUPABASE_URL")
+SUPABASE_KEY = env("SUPABASE_KEY")
+SUPABASE_BUCKET = env("SUPABASE_BUCKET", "english-words")
+
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+cache = {}
 
 @router.get('/random', response_model=Word)
 async def get_random_word():
-    path = 'json_files/*.json'
-    all_data = []
-    for filename in glob.glob(path):
-        with open(filename, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-            all_data.append(data)
-    words = [item['word'] for item in all_data[0]]
-    random_word = random.choice(words)
-    everything = await fetch_definition_word(random_word)
-    word = Word(word=random_word, part_of_speech=everything[0], definitions=everything[1])
-    return word
+    try:
+        file_name = "english_words.json"
+        if file_name not in cache:
+            try:
+                response = supabase.storage.from_(SUPABASE_BUCKET).download(file_name)
+                data = json.loads(response.decode("utf-8"))
+                cache[file_name] = data
+            except Exception as e:
+                raise HTTPException(status_code=404, detail=f"File not found: {str(e)}")
+
+        data = cache[file_name]
+
+        random_word_entry = random.choice(data)
+        random_word = random_word_entry["word"]
+        everything = await fetch_definition_word(random_word)
+
+        word = Word(word=random_word, part_of_speech=everything[0], definitions=everything[1])
+        return word
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 @router.get('/random/{level}', response_model=LevelWord)
 async def get_random_word_by_level(level: str):
     if level.lower() == 'a1':
-        path = 'json_files/english_words_a1.json'
-        for filename in glob.glob(path):
-            with open(filename, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-        words = [item['word'] for item in data]
-        random_word = random.choice(words)
+        file_name = "english_words_a1.json"
+        if file_name not in cache:
+            try:
+                response = supabase.storage.from_(SUPABASE_BUCKET).download(file_name)
+                data = json.loads(response.decode("utf-8"))
+                cache[file_name] = data
+            except Exception as e:
+                raise HTTPException(status_code=404, detail=f"File not found: {str(e)}")
+
+        data = cache[file_name]
+
+        random_word_entry = random.choice(data)
+        random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
         level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='A1')
     
     elif level.lower() == 'a2':
-        path = 'json_files/english_words_a2.json'
-        for filename in glob.glob(path):
-            with open(filename, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-        words = [item['word'] for item in data]
-        random_word = random.choice(words)
+        file_name = "english_words_a2.json"
+        if file_name not in cache:
+            try:
+                response = supabase.storage.from_(SUPABASE_BUCKET).download(file_name)
+                data = json.loads(response.decode("utf-8"))
+                cache[file_name] = data
+            except Exception as e:
+                raise HTTPException(status_code=404, detail=f"File not found: {str(e)}")
+
+        data = cache[file_name]
+
+        random_word_entry = random.choice(data)
+        random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
         level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='A2')
 
     elif level.lower() == 'b1':
-        path = 'json_files/english_words_b1.json'
-        for filename in glob.glob(path):
-            with open(filename, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-        words = [item['word'] for item in data]
-        random_word = random.choice(words)
+        file_name = "english_words_b1.json"
+        if file_name not in cache:
+            try:
+                response = supabase.storage.from_(SUPABASE_BUCKET).download(file_name)
+                data = json.loads(response.decode("utf-8"))
+                cache[file_name] = data
+            except Exception as e:
+                raise HTTPException(status_code=404, detail=f"File not found: {str(e)}")
+
+        data = cache[file_name]
+
+        random_word_entry = random.choice(data)
+        random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
         level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='B1')
 
     elif level.lower() == 'b2':
-        path = 'json_files/english_words_b2.json'
-        for filename in glob.glob(path):
-            with open(filename, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-        words = [item['word'] for item in data]
-        random_word = random.choice(words)
+        file_name = "english_words_b2.json"
+        if file_name not in cache:
+            try:
+                response = supabase.storage.from_(SUPABASE_BUCKET).download(file_name)
+                data = json.loads(response.decode("utf-8"))
+                cache[file_name] = data
+            except Exception as e:
+                raise HTTPException(status_code=404, detail=f"File not found: {str(e)}")
+
+        data = cache[file_name]
+
+        random_word_entry = random.choice(data)
+        random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
         level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='B2')
 
     elif level.lower() == 'c1':
-        path = 'json_files/english_words_c1.json'
-        for filename in glob.glob(path):
-            with open(filename, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-        words = [item['word'] for item in data]
-        random_word = random.choice(words)
+        file_name = "english_words_c1.json"
+        if file_name not in cache:
+            try:
+                response = supabase.storage.from_(SUPABASE_BUCKET).download(file_name)
+                data = json.loads(response.decode("utf-8"))
+                cache[file_name] = data
+            except Exception as e:
+                raise HTTPException(status_code=404, detail=f"File not found: {str(e)}")
+
+        data = cache[file_name]
+
+        random_word_entry = random.choice(data)
+        random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
         level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='C1')
     else:
