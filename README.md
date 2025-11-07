@@ -40,7 +40,7 @@ Then open your browser at:
 👉 http://127.0.0.1:8000/docs
 
 Or you can just open this website, if you don't want to do everything above:
-👉 https://random-word-iota.vercel.app/
+👉 https://random-word-blond.vercel.app
 
 ---
 
