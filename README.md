@@ -28,7 +28,7 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 ```bash
 git clone https://github.com/EmilioAugust/RandomWord.git
-cd random-english-words-api
+cd RandomWord
 pip install -r requirements.txt
 ```
 
