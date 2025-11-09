@@ -8,10 +8,14 @@ async def fetch_definition_word(word: str):
     data = response.json()
     all_definitions = []
     all_parts = set()
-    everything = [all_parts, all_definitions]
+    all_synonyms = []
+    all_antonyms = []
+    everything = [all_parts, all_definitions, all_synonyms, all_antonyms]
     try:
         for definit in data:
             for defi in definit['meanings']:
+                all_synonyms.append(defi['synonyms'])
+                all_antonyms.append(defi['antonyms'])
                 all_parts.add(defi['partOfSpeech'])
                 for d in defi['definitions']:
                     all_definitions.append(d['definition'])

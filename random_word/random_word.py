@@ -34,7 +34,7 @@ async def get_random_word():
         random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
 
-        word = Word(word=random_word, part_of_speech=everything[0], definitions=everything[1])
+        word = Word(word=random_word, part_of_speech=everything[0], definitions=everything[1], synonyms=everything[2], antonyms=everything[3])
         return word
 
     except Exception as e:
@@ -57,7 +57,7 @@ async def get_random_word_by_level(level: str):
         random_word_entry = random.choice(data)
         random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
-        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='A1')
+        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], synonyms=everything[2], antonyms=everything[3], level='A1')
     
     elif level.lower() == 'a2':
         file_name = "english_words_a2.json"
@@ -74,7 +74,7 @@ async def get_random_word_by_level(level: str):
         random_word_entry = random.choice(data)
         random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
-        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='A2')
+        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], synonyms=everything[2], antonyms=everything[3], level='A2')
 
     elif level.lower() == 'b1':
         file_name = "english_words_b1.json"
@@ -91,7 +91,7 @@ async def get_random_word_by_level(level: str):
         random_word_entry = random.choice(data)
         random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
-        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='B1')
+        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], synonyms=everything[2], antonyms=everything[3], level='B1')
 
     elif level.lower() == 'b2':
         file_name = "english_words_b2.json"
@@ -108,7 +108,7 @@ async def get_random_word_by_level(level: str):
         random_word_entry = random.choice(data)
         random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
-        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='B2')
+        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], synonyms=everything[2], antonyms=everything[3], level='B2')
 
     elif level.lower() == 'c1':
         file_name = "english_words_c1.json"
@@ -125,7 +125,7 @@ async def get_random_word_by_level(level: str):
         random_word_entry = random.choice(data)
         random_word = random_word_entry["word"]
         everything = await fetch_definition_word(random_word)
-        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], level='C1')
+        level_word = LevelWord(word=random_word, part_of_speech=everything[0], definitions=everything[1], synonyms=everything[2], antonyms=everything[3], level='C1')
     else:
         raise HTTPException(status_code=404, detail=f'Not found level {level}')
     
