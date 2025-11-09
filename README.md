@@ -16,9 +16,11 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 ## 🛠️ Tech Stack
 
-- **Backend:** [FastAPI](https://fastapi.tiangolo.com/)  
-- **Language:** Python 3.10+  
-- **Data Source:** Custom dataset (8000 words, but in future I'll add more words)
+- **Backend:** [FastAPI](https://fastapi.tiangolo.com/)
+- **Database:** [Supabase](https://supabase.com/)
+- **Language:** Python 3.10+
+- **Deployment:** [Vercel](https://vercel.com/)
+- **Data Source:** 8,000+ English words with CEFR levels
 
 ---
 
@@ -40,7 +42,7 @@ Then open your browser at:
 👉 http://127.0.0.1:8000/docs
 
 Or you can just open this website, if you don't want to do everything above:
-👉 https://random-word-iota.vercel.app/
+👉 https://random-word-blond.vercel.app
 
 ---
 
@@ -55,6 +57,8 @@ Or you can just open this website, if you don't want to do everything above:
 
 ## 🧩 Future Improvements
 - ☑️ Add part of speech (noun, verb, adjective, etc.)
+- ☐ Add synonyms / antonyms
+- ☐ Add pronunciation (audio files or transcription)
 - ☐ Support multiple languages
 
 ---
