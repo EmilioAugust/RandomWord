@@ -57,6 +57,8 @@ Or you can just open this website, if you don't want to do everything above:
 
 ## 🧩 Future Improvements
 - ☑️ Add part of speech (noun, verb, adjective, etc.)
+- ☐ Add synonyms / antonyms
+- ☐ Add pronunciation (audio files or transcription)
 - ☐ Support multiple languages
 
 ---
