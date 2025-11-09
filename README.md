@@ -50,7 +50,7 @@ Or you can just open this website, if you don't want to do everything above:
 
 | Method | Endpoint           | Description                                 |
 | ------ | ------------------ | ------------------------------------------- |
-| `GET`  | `[/v1/random](https://random-word-blond.vercel.app/v1/random)`          | Get a random English word                   |
+| `GET`  | [`/v1/random`](https://random-word-blond.vercel.app/v1/random)          | Get a random English word                   |
 | `GET`  | `[/v1/random/a1](https://random-word-blond.vercel.app/v1/random/a1)` | Get a random word filtered by level (A1–C1) |
 
 ---
