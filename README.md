@@ -7,10 +7,10 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 ## 🚀 Features
 
-- 🎲 **Get random English words with definitions** via API  
-- 🧩 **Filter by difficulty level** (A1, A2, B1, B2, C1)
-- ⚡ Built with **FastAPI** — modern, fast, and async  
-- 🌍 Perfect for integrating into learning apps, chatbots, or word games  
+-  **Get random English words with definitions** via API  
+-  **Filter by difficulty level** (A1, A2, B1, B2, C1)
+-  Built with **FastAPI** — modern, fast, and async  
+-  Perfect for integrating into learning apps, chatbots, or word games  
 
 ---
 
