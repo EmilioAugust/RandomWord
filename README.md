@@ -24,28 +24,6 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 ---
 
-## 📦 Installation
-
-```bash
-git clone https://github.com/EmilioAugust/RandomWord.git
-cd RandomWord
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ Running the App
-```bash
-uvicorn main:app --reload
-```
-Then open your browser at:
-👉 http://127.0.0.1:8000/docs
-
-Or you can just open this website, if you don't want to do everything above:
-👉 https://random-word-blond.vercel.app
-
----
-
 ## 📚 API Endpoints
 
 | Method | Endpoint           | Description                                 |
