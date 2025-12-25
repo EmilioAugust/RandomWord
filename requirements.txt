@@ -5,5 +5,5 @@ pytest>=8.4.2
 sqlalchemy>=2.0.44
 uvicorn==0.38.0
 supabase>=2.23.3
-
 environs>=14.5.0
+
