@@ -28,8 +28,8 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 | Method | Endpoint           | Description                                 |
 | ------ | ------------------ | ------------------------------------------- |
-| `GET`  | [`/v1/random`](https://random-word-blond.vercel.app/v1/random)          | Get a random English word                   |
-| `GET`  | [`/v1/random/a1`](https://random-word-blond.vercel.app/v1/random/a1) | Get a random word filtered by level (A1–C1) |
+| `GET`  | [`/v1/random`](https://randomword.up.railway.app/v1/random)          | Get a random English word                   |
+| `GET`  | [`/v1/random/a1`](https://randomword.up.railway.app/v1/random/a1) | Get a random word filtered by level (A1–C1) |
 
 ---
 
