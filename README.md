@@ -7,7 +7,7 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 
 ## 🚀 Features
 
--  **Get random English words with definitions** via API  
+-  Get random **English** words with definitions
 -  **Filter by difficulty level** (A1, A2, B1, B2, C1)
 -  Built with **FastAPI** — modern, fast, and async  
 -  Perfect for integrating into learning apps, chatbots, or word games  
@@ -19,7 +19,6 @@ You can also select your **English proficiency level (A1–C1)** to get words ta
 - **Backend:** [FastAPI](https://fastapi.tiangolo.com/)
 - **Database:** [Supabase](https://supabase.com/)
 - **Language:** Python 3.10+
-- **Deployment:** [Vercel](https://vercel.com/)
 - **Data Source:** 8,000+ English words with CEFR levels
 
 ---
